@@ -1,11 +1,11 @@
 #########
 # Security group configuration
 
-resource "aws_security_group" "ec2-instance" {
+resource "aws_security_group" "sg-ec2" {
 
   description   = "SG for ec2-instance"
   name          = local.sg_name
-  vpc_id        = module.vpc.vpc_id
+  vpc_id        = aws_vpc.my_vpc.id
 
   ingress {
     description = "ssh access"

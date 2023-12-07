@@ -6,10 +6,10 @@ resource "aws_key_pair" "ssh_key" {
 resource "aws_instance" "ec2instance" {
 
   ami                       = data.aws_ami.ubuntu.id
-  instance_type             = "t3.medium"
-  subnet_id                 = module.vpc.public_subnets[0]
+  instance_type             = "t2.micro"
+  subnet_id                 = aws_subnet.public.id
   private_ip                = "10.0.4.10"
-  vpc_security_group_ids    = ["${aws_security_group.ec2-instance.id}"]
+  vpc_security_group_ids    = ["${aws_security_group.sg-ec2.id}"]
 
   #checkov:skip=CKV_AWS_88
   associate_public_ip_address   = true

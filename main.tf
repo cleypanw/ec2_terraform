@@ -29,10 +29,14 @@ resource "random_string" "suffix" {
 
 # Define local var that will be use by TF
 locals {
-  vpc_name          = "${var.name_prefix}-vpc-${random_string.suffix.result}"
-  ec2_instance_name = "${var.name_prefix}-ec2-instance-${random_string.suffix.result}"
-  sshkey_name       = "${var.name_prefix}-sshkey-${random_string.suffix.result}"
-  sg_name           = "${var.name_prefix}-sg-${random_string.suffix.result}"
+  vpc_name            = "${var.name_prefix}-vpc-${random_string.suffix.result}"
+  ec2_instance_name   = "${var.name_prefix}-ec2-instance-${random_string.suffix.result}"
+  sshkey_name         = "${var.name_prefix}-sshkey-${random_string.suffix.result}"
+  sg_name             = "${var.name_prefix}-sg-${random_string.suffix.result}"
+  private_subnet_name = "${var.name_prefix}-private-subnet-${random_string.suffix.result}"
+  public_subnet_name  = "${var.name_prefix}-public-subnet-${random_string.suffix.result}"
+  igw_name            = "${var.name_prefix}-igw-${random_string.suffix.result}"
+  rt_name             = "${var.name_prefix}-rt-${random_string.suffix.result}"
 }
 
 
