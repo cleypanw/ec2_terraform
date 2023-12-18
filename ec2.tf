@@ -56,4 +56,8 @@ resource "aws_instance" "ec2instance" {
     yor_name             = "ec2instance"
     yor_trace            = "1182a718-57ef-4eb5-aeb5-ffadf00473ca"
   }
+  ebs_optimized = true
+  metadata_options {
+    http_tokens = "required"
+  }
 }
