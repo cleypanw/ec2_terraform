@@ -14,6 +14,7 @@ resource "aws_vpc" "my_vpc" {
     git_repo             = "ec2_terraform"
     yor_name             = "my_vpc"
     yor_trace            = "429710f9-fc63-4b2e-8fa5-7cb6303dc846"
+    nils                 = "custom"
   }
 }
 
@@ -34,6 +35,7 @@ resource "aws_subnet" "public" {
     git_repo             = "ec2_terraform"
     yor_name             = "public"
     yor_trace            = "4c37b265-5a06-4859-b296-6572b426d666"
+    nils                 = "custom"
   }
 }
 
@@ -53,6 +55,7 @@ resource "aws_subnet" "private" {
     git_repo             = "ec2_terraform"
     yor_name             = "private"
     yor_trace            = "f813af94-4bff-4163-98a1-582497e196d4"
+    nils                 = "custom"
   }
 }
 
@@ -70,6 +73,7 @@ resource "aws_internet_gateway" "gw" {
     git_repo             = "ec2_terraform"
     yor_name             = "gw"
     yor_trace            = "a18d2b51-0d17-4547-a62f-ddfe26820ab4"
+    nils                 = "custom"
   }
 }
 
@@ -91,6 +95,7 @@ resource "aws_route_table" "second_rt" {
     git_repo             = "ec2_terraform"
     yor_name             = "second_rt"
     yor_trace            = "a5356cce-d544-4716-890a-8cce99674639"
+    nils                 = "custom"
   }
 }
 

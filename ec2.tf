@@ -11,6 +11,7 @@ resource "aws_key_pair" "ssh_key" {
     git_repo             = "ec2_terraform"
     yor_name             = "ssh_key"
     yor_trace            = "695676df-a93f-4e86-8892-68da78fb5647"
+    nils                 = "custom"
   }
 }
 
@@ -55,5 +56,6 @@ resource "aws_instance" "ec2instance" {
     git_repo             = "ec2_terraform"
     yor_name             = "ec2instance"
     yor_trace            = "1182a718-57ef-4eb5-aeb5-ffadf00473ca"
+    nils                 = "custom"
   }
 }
