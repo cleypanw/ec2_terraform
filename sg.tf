@@ -32,5 +32,6 @@ resource "aws_security_group" "sg-ec2" {
     git_repo             = "ec2_terraform"
     yor_name             = "sg-ec2"
     yor_trace            = "16448a46-598b-4f09-8c35-adf3c14404fa"
+    nils                 = "custom"
   }
 }
